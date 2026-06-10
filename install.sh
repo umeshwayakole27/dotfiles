@@ -43,10 +43,10 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     ddcutil brightnessctl app2unit libcava networkmanager lm_sensors
     fish aubio pipewire qt6-base qt6-declarative swappy
     libqalculate ttf-material-symbols-variable ttf-cascadia-code-nerd
-    quickshell-git caelestia-cli
+    quickshell-git caelestia-cli hyprland-git
   )
   
-  $AUR_HELPER -S --needed "${DEPS[@]}"
+  $AUR_HELPER -Sy --needed --noconfirm "${DEPS[@]}"
 
   # Compile and install shell
   echo "==> Building caelestia-shell from source..."

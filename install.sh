@@ -7,8 +7,8 @@ CONFIG_TARGET="$HOME"
 echo "==> Caelestia Environment Installer <=="
 
 # 1. Stow Dotfiles
-echo "==> Stowing hypr, foot, ghostty configs..."
-for pkg in hypr foot ghostty; do
+echo "==> Stowing hypr, foot, ghostty, quickshell configs..."
+for pkg in hypr foot ghostty quickshell; do
   if [ -d "$DOTFILES_DIR/$pkg" ]; then
     stow -v -t "$CONFIG_TARGET" -d "$DOTFILES_DIR" "$pkg"
   else
